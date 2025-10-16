@@ -16,3 +16,4 @@ obj["name"];//access
 obj["name"]="shreesh"
 obj.city="bhubaneshwar"
 console.log(obj);
+let {lat,long}=obj.address.location;
