@@ -38,7 +38,7 @@ let karr=arr.map(function(val){
 console.log(karr);
 
 const filter=arr.filter(function(val){
-    if(val>10) return true;
+    if(val>1) return true;
     //if false doest got array
 })
 console.log(filter)
