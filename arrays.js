@@ -34,4 +34,11 @@ arr.forEach(function(val){
 let karr=arr.map(function(val){
     return val*2;
 })// returns a new array with each element multiplied by 2
+// if no return undefined
 console.log(karr);
+
+const filter=arr.filter(function(val){
+    if(val>10) return true;
+    //if false doest got array
+})
+console.log(filter)
