@@ -5,3 +5,5 @@ let obj={
 obj.name;//access
 obj["name"];//access
 obj["name"]="shreesh"
+obj.city="bhubaneshwar"
+console.log(obj);
