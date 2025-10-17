@@ -16,4 +16,6 @@ obj["name"];//access
 obj["name"]="shreesh"//edit
 obj.city="bhubaneshwar"
 console.log(obj);
+
+//destrucutring
 let {lat,long}=obj.address.location;
