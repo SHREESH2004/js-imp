@@ -13,7 +13,7 @@ let obj={
 }
 obj.name;//access
 obj["name"];//access
-obj["name"]="shreesh"
+obj["name"]="shreesh"//edit
 obj.city="bhubaneshwar"
 console.log(obj);
 let {lat,long}=obj.address.location;
