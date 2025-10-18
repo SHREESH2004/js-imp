@@ -13,4 +13,8 @@ console.log(queryTitle.innerHTML);
 const queryall=document.querySelectorAll('#main-title');// select all elements with the id
 console.log(queryall);//give all elements with the id in a node list in an array-like structure
 title.innerText="New Title";//change the text of the title element
+title.innerHTML="<em>New Title</em>";//change the text of the title element with html
 console.log(title.innerText);
+title.hidden=false;//hide the element
+
+
