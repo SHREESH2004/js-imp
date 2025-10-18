@@ -12,3 +12,5 @@ const queryTitle=document.querySelector('#main-title');// select fist elemt with
 console.log(queryTitle.innerHTML);
 const queryall=document.querySelectorAll('#main-title');// select all elements with the id
 console.log(queryall);//give all elements with the id in a node list in an array-like structure
+title.innerText="New Title";//change the text of the title element
+console.log(title.innerText);
