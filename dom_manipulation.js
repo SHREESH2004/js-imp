@@ -5,4 +5,13 @@ console.log(a.getAttribute("src"));
 
 const title=document.createElement("h1");
 title.textContent="This is a new Title";
-document.body.appendChild(title);
+title.style.color="blue";
+document.body.appendChild(title);//prepend add at first append at last
+title.style.color="green";
+title.classList.add("title");
+console.log(title.classList);
+
+let list=document.querySelectorAll("ul li");
+list.forEach(function(item){
+    item.style.color="purple";
+});
