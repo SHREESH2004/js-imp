@@ -15,3 +15,6 @@ let list=document.querySelectorAll("ul li");
 list.forEach(function(item){
     item.style.color="purple";
 });
+const newItem=document.createElement("li");
+newItem.textContent="New Item Added";
+document.querySelector("ul").appendChild(newItem);
