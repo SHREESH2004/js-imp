@@ -15,5 +15,5 @@ console.log(a); // error: a is not defined
 /*The environment in which JavaScript code is executed, including the scope chain and variable object.
 js make 1 process whenever sees a fns it creates a new execution context, it is 
 process that works in 2 phases: creation/memory phase and execution phase
-
+C:\Users\Shreesh\OneDrive\Desktop
 */
