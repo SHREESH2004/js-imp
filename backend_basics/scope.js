@@ -11,3 +11,9 @@ console.log(a); // error: a is not defined
 //global scope: variables declared outside any function or block are accessible everywhere in the code
 
 
+//Execution context: 
+/*The environment in which JavaScript code is executed, including the scope chain and variable object.
+js make 1 process whenever sees a fns it creates a new execution context, it is 
+process that works in 2 phases: creation/memory phase and execution phase
+
+*/
