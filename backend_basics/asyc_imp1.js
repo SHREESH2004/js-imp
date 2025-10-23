@@ -1,42 +1,53 @@
 function createinvoice(callback) {
-    setTimeout(() => {
-        console.log("Creating invoice");
-        const error=null;
-        const chargeamount=500;
-        callback(error, chargeamount);
-    }, 2000);
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            console.log("Creating invoice");
+            const error = null;
+            const chargeamount = 500;
+            resolve({ error, chargeamount });
+        }, 2000);
+    });
 }
-function servingfood(callback) {
-    setTimeout(() => {
-        console.log("Serving food")
-        const error=new Error("Food is not served");
-        callback(error);
-    }, 1000)
+function createfood() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            console.log("Creating food");
+            resolve();
+        }, 1000);
+    });
 }
-function checkinventory(callback) {
-    setTimeout(() => {
-        console.log("Serving food");
-        callback();
-    })
+function servingfood() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            console.log("Serving food");
+            const error = new Error("Food is not served");
+            reject(error);
+        }, 1000);
+    });
+}
+function checkinventory() {
+
+    return myPromise = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            console.log("Check inventory");
+            resolve();
+        }, 1000);
+    });
 }
 function main() {
     console.log("Other process running");
-    checkinventory(() => {
-        console.log("Inventory done")
-        servingfood((error) => {
-            if (error) {
-                console.error(error.message);
-            }
-            createinvoice((err, chargeamount) => {
-                if (err) {
-                    console.error(err.message);
-                    return;
-                }
-                console.log("Invoice created");
-                console.log(`Charge amount: ${chargeamount}`);
-            });
-        });
+    checkinventory()
+    .then(createfood)
+    .then(servingfood)
+    .then(createinvoice)
+    .then((result) => {
+        if (result.error) {
+            console.log("Error in creating invoice:", result.error);
+        } else {
+            console.log("Invoice created with amount:", result.chargeamount);
+        }
     });
+
 }
 
 main();
