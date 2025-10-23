@@ -46,6 +46,8 @@ function main() {
         } else {
             console.log("Invoice created with amount:", result.chargeamount);
         }
+    }).catch((err)=>{
+        console.log("Error occurred:", err.message);
     });
 
 }
