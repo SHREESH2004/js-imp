@@ -11,3 +11,4 @@ function main(){
 }
 //example of synchronous function
 
+main()
