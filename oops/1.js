@@ -22,3 +22,17 @@ function Person(name,age){
 const p1=new Person('shreesh',20);
 console.log(p1);
 //Person { name: 'shreesh', age: 20 }
+
+
+console.log('Method with es5 function');
+
+const object1={
+    name:'shreesh',
+    age:20,
+}
+
+function printDetails(city,country){
+    console.log(this);
+}
+printDetails.call(object1);//it shows object1
+printDetails.apply(object1,[1,2]);//it passes the first 2 parameters first object next all values in array
