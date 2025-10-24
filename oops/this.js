@@ -31,8 +31,10 @@ const object1={
     age:20,
 }
 
-function printDetails(city,country){
-    console.log(this);
+function printDetails(city,country,age){
+    console.log(this,city,country,age);
 }
 printDetails.call(object1);//it shows object1
-printDetails.apply(object1,[1,2]);//it passes the first 2 parameters first object next all values in array
+printDetails.apply(object1,[1,2,3]);//it passes the first 2 parameters first object next all values in array
+let bindfnc=printDetails.bind(object1,1,2,4);
+console.log(bindfnc);
