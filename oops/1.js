@@ -13,3 +13,12 @@ const obj={
 
 obj.greet();
 //{ name: 'shreesh', greet: [Function: greet] }
+
+//new creates blank object and this refers to that object
+function Person(name,age){
+    this.name=name;
+    this.age=age;
+}
+const p1=new Person('shreesh',20);
+console.log(p1);
+//Person { name: 'shreesh', age: 20 }
