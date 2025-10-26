@@ -22,4 +22,5 @@ class Admin {
 const myCar = new Car("BMW", "Gt20", 2025,"user");
 const Admins = new Admin(myCar);
 
+
 Admins.Alldetails();
