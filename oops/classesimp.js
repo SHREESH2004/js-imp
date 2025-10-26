@@ -8,7 +8,6 @@ class Car {
 }
 
 class Admin {
-    // 1. The constructor takes one argument: a 'Car' object
     constructor(carObject) {
         this.car = carObject; 
         this.role = "admin";
